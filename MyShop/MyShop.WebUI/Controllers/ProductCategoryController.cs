@@ -15,7 +15,6 @@ namespace MyShop.WebUI.Controllers
         {
             Context = new ProductCategoryRepo();
         }
-        // GET: ProductManage
         public ActionResult Index()
         {
             List<ProductCategory> productCategories = Context.Collection().ToList();
