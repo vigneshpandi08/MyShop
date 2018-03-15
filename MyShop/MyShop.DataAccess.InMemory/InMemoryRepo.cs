@@ -5,10 +5,11 @@ using System.Linq;
 using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
+using MyShop.Core.Contracts;
 
 namespace MyShop.DataAccess.InMemory
 {
-    public class InMemoryRepo<T> where T:BaseEntity
+    public class InMemoryRepo<T> :IRepo<T> where T:BaseEntity
     {
         ObjectCache cache=MemoryCache.Default;
         List<T> items;
@@ -26,6 +27,10 @@ namespace MyShop.DataAccess.InMemory
         public void Commit()
         {
             cache[className] = items;
+        }
+        public void DoSomething()
+        {
+
         }
         public void Insert(T t)
         {
