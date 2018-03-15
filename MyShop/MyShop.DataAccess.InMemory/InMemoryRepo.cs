@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyShop.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Caching;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyShop.DataAccess.InMemory
 {
-    public class InMemoryRepo<T>
+    public class InMemoryRepo<T> where T:BaseEntity
     {
         ObjectCache cache=MemoryCache.Default;
         List<T> items;
@@ -36,6 +37,34 @@ namespace MyShop.DataAccess.InMemory
             if(tToUpdate!=null)
             {
                 tToUpdate = t;
+            }
+            else
+            {
+                throw new Exception(className + "Not Found");
+            }
+        }
+        public T Find(string Id)
+        {
+            T t = items.Find(i => i.Id == Id);
+            if(t!=null)
+            {
+                return t;
+            }
+            else
+            {
+                throw new Exception(className + "Not Found");
+            }
+        }
+        public IQueryable<T> Collection()
+        {
+            return items.AsQueryable();
+        }
+        public void Delete(string Id)
+        {
+            T tToDelete = items.Find(i => i.Id == Id);
+            if (tToDelete != null)
+            {
+                items.Remove(tToDelete);
             }
             else
             {
