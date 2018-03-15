@@ -13,5 +13,9 @@ namespace MyShop.WebUI.Controllers
         {
             return View();
         }
+        public ActionResult Update()
+        {
+            return View();
+        }
     }
 }
