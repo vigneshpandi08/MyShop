@@ -6,14 +6,10 @@ using System.Web.Mvc;
 
 namespace MyShop.WebUI.Controllers
 {
-    public class TestController : Controller
+    public class ExampleController : Controller
     {
-        // GET: Test
+        // GET: Example
         public ActionResult Index()
-        {
-            return View();
-        }
-        public ActionResult Update()
         {
             return View();
         }
