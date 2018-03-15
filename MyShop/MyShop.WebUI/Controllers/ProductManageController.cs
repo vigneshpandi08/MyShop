@@ -68,8 +68,11 @@ namespace MyShop.WebUI.Controllers
                 {
                     return View(product);
                 }
-                productToEdit.Descriiption = product.Descriiption;
+                productToEdit.Category = product.Category;
+                productToEdit.Description = product.Description;
                 productToEdit.Name = product.Name;
+                productToEdit.Image = product.Image;
+                productToEdit.Price = product.Price;
 
                 Context.Commit();
                 return RedirectToAction("Index");
@@ -100,7 +103,8 @@ namespace MyShop.WebUI.Controllers
             {
                 Context.Delete(Id);
                 Context.Commit();
-                return View(productToDelete);
+                return RedirectToAction("Index");
+                //return View(productToDelete);
             }
         }
     }
