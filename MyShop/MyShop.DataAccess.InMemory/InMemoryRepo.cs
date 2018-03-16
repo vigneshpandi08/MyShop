@@ -13,7 +13,7 @@ namespace MyShop.DataAccess.InMemory
     {
         ObjectCache cache=MemoryCache.Default;
         List<T> items;
-        //string className;
+        string className;
 
         public InMemoryRepo()
         {
