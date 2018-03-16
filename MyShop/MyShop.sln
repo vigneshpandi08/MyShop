@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop", "MyShop\MyShop.csproj", "{DDB647F3-600B-4591-9442-751C88C74010}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop.Core", "MyShop.Core\MyShop.Core.csproj", "{B96ABD8E-480D-4F25-9383-EA16918E730D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop.Services", "MyShop.Services\MyShop.Services.csproj", "{3825816C-9F32-47EE-945D-5AEE32D23341}"
@@ -23,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DDB647F3-600B-4591-9442-751C88C74010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DDB647F3-600B-4591-9442-751C88C74010}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DDB647F3-600B-4591-9442-751C88C74010}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DDB647F3-600B-4591-9442-751C88C74010}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B96ABD8E-480D-4F25-9383-EA16918E730D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B96ABD8E-480D-4F25-9383-EA16918E730D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B96ABD8E-480D-4F25-9383-EA16918E730D}.Release|Any CPU.ActiveCfg = Release|Any CPU
