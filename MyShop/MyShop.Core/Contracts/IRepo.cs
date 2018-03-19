@@ -2,7 +2,7 @@
 using System;
 namespace MyShop.Core.Contracts
 {
-    interface IRepo<T> where T : BaseEntity
+    public interface IRepo<T> where T : BaseEntity
     {
         System.Linq.IQueryable<T> Collection();
         void Commit();

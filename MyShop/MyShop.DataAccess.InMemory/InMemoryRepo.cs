@@ -9,7 +9,7 @@ using MyShop.Core.Contracts;
 
 namespace MyShop.DataAccess.InMemory
 {
-    public class InMemoryRepo<T> :IRepo<T> where T:BaseEntity
+    public class InMemoryRepo<T> : IRepo<T> where T:BaseEntity
     {
         ObjectCache cache=MemoryCache.Default;
         List<T> items;
